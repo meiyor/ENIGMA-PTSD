@@ -21,11 +21,11 @@
 </p>
 
 This repository contains:
-- **Preprocessing pipelines** to generate in this [folder](https://github.com/BRAINLAB-UTA/ENIGMA-PTSD/tree/main/preprocessing):
+- **Preprocessing pipelines** to generate in this [folder](https://github.com/meiyor/ENIGMA-PTSD/tree/main/preprocessing):
   - structural features (sMRI-derived)
   - fALFF/ReHo (rs-fMRI-derived)
   - RSData (resting-state 4D time-series–derived)
-- **Dataloader creation utilities** for downstream SSL evaluation/training in this [folder](https://github.com/BRAINLAB-UTA/ENIGMA-PTSD/tree/main/SSL_evaluation).
+- **Dataloader creation utilities** for downstream SSL evaluation/training in this [folder](https://github.com/meiyor/ENIGMA-PTSD/tree/main/SSL_evaluation).
 
 For start running the preprocessing and DataLoader creation follow the next steps in sequence:
 
@@ -56,7 +56,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-<h2> For a full installation guide for all the OS following this <b> <a href="https://github.com/BRAINLAB-UTA/ENIGMA-PTSD/blob/main/docs/installationGUIDE.md" target="_blank" rel="noopener noreferrer">  Installation Guide </a> </b></h2>
+<h2> For a full installation guide for all the OS following this <b> <a href="https://github.com/meiyor/ENIGMA-PTSD/blob/main/docs/installationGUIDE.md" target="_blank" rel="noopener noreferrer">  Installation Guide </a> </b></h2>
 
 ### 3) Data generation (structural, fALFF/ReHo, RSData)
 
@@ -110,7 +110,7 @@ Again this data **does not follow a standard BIDS format**. The current code can
 
 #### Structural Images
 
-To create the 3D structural images on the [**Destrieux**](https://nilearn.github.io/dev/modules/description/destrieux_surface.html) and [**Desikan-Killiany-Tourville (DKT)**](https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation) atlases run the follow Python command in the [**preprocessing**](https://github.com/BRAINLAB-UTA/ENIGMA-PTSD/tree/main/preprocessing) folder
+To create the 3D structural images on the [**Destrieux**](https://nilearn.github.io/dev/modules/description/destrieux_surface.html) and [**Desikan-Killiany-Tourville (DKT)**](https://surfer.nmr.mgh.harvard.edu/fswiki/CorticalParcellation) atlases run the follow Python command in the [**preprocessing**](https://github.com/meiyor/ENIGMA-PTSD/tree/main/preprocessing) folder
 
 <br>
 <br>
@@ -187,7 +187,7 @@ python fslinstaller.py
 <br>
 <br>
 
-Now load the bin folder in your bashrc system using the .sh code [here](https://github.com/BRAINLAB-UTA/ENIGMA-PTSD/blob/main/fsl_load.sh) and running this. First locate where your **FSL** files are located in your local machine and modify the bash file with the right path.
+Now load the bin folder in your bashrc system using the .sh code [here](https://github.com/meiyor/ENIGMA-PTSD/blob/main/fsl_load.sh) and running this. First locate where your **FSL** files are located in your local machine and modify the bash file with the right path.
 
 <br>
 <br>
@@ -218,7 +218,7 @@ fsleyes ../../AMC/sub-1132/sub-1132_schaefer_4d_mni_image.nii.gz ../../AMC/sub-1
       </a>
 </td>
 
-[**Click here for better visualization**](https://github.com/BRAINLAB-UTA/ENIGMA-PTSD/blob/main/assets/fsleyes_QC_better.png)
+[**Click here for better visualization**](https://github.com/meiyor/ENIGMA-PTSD/blob/main/assets/fsleyes_QC_better.png)
 
 <br>
 <br>
@@ -232,7 +232,7 @@ After concatenating all subjects that define **RSData**, **Structural**, and **f
 
 ## 5) Static code evaluation
 
-For testing the quality of your code please follow the bash commands here as a standardized [**pylinter**](https://github.com/BRAINLAB-UTA/ENIGMA-PTSD/blob/main/preprocessing/standardize_template.sh). Do that for each subfolder you have running the following bash command.
+For testing the quality of your code please follow the bash commands here as a standardized [**pylinter**](https://github.com/meiyor/ENIGMA-PTSD/ENIGMA-PTSD/blob/main/preprocessing/standardize_template.sh). Do that for each subfolder you have running the following bash command.
 
 <br>
 <br>
@@ -244,6 +244,6 @@ For testing the quality of your code please follow the bash commands here as a s
 <br>
 <br>
 
-Customize your **toml** file following the rules [here](https://github.com/BRAINLAB-UTA/ENIGMA-PTSD/blob/main/preprocessing/pyproject.toml) and be sure to obtain a minimum grade of **8** out of 10 for your static code evaluation per folder.
+Customize your **toml** file following the rules [here](https://github.com/meiyor/ENIGMA-PTSD/blob/main/preprocessing/pyproject.toml) and be sure to obtain a minimum grade of **8** out of 10 for your static code evaluation per folder.
 
 
