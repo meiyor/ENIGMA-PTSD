@@ -571,6 +571,10 @@ def save_simclr_community_metric_plot(metric_rows, fold_out):
         handles=[line_nmi, line_sil], loc="upper center",
         bbox_to_anchor=(0.5, 1.02), frameon=False, ncol=2, fontsize=9,
     )
+    ax_nmi.tick_params(axis="x", labelrotation=90, labelsize=10)
+    ax_nmi.tick_params(axis="y", colors=nmi_color, labelsize=12)
+    ax_sil.tick_params(axis="y", colors=sil_color, labelsize=12)
+
     fig.tight_layout(rect=(0, 0, 1, 0.94))
     for extension in ("png", "pdf"):
         fig.savefig(
@@ -617,6 +621,9 @@ def save_simclr_subject_pair_metric_plot(metric_rows, fold_out):
         handles=[line_nmi, line_sil], loc="upper center",
         bbox_to_anchor=(0.5, 1.02), frameon=False, ncol=2, fontsize=9,
     )
+    ax_nmi.tick_params(axis="x", labelrotation=90, labelsize=10)
+    ax_nmi.tick_params(axis="y", colors=nmi_color, labelsize=12)
+    ax_sil.tick_params(axis="y", colors=sil_color, labelsize=12)
     fig.tight_layout(rect=(0, 0, 1, 0.94))
     for extension in ("png", "pdf"):
         fig.savefig(
@@ -665,6 +672,10 @@ def save_simclr_paired_cosine_mrr_plot(metric_rows, fold_out):
         handles=[line_nmi, line_sil], loc="upper center",
         bbox_to_anchor=(0.5, 1.02), frameon=False, ncol=2, fontsize=9,
     )
+    ax_nmi.tick_params(axis="x", labelrotation=90, labelsize=10)
+    ax_nmi.tick_params(axis="y", colors=nmi_color, labelsize=12)
+    ax_sil.tick_params(axis="y", colors=sil_color, labelsize=12)
+
     fig.tight_layout(rect=(0, 0, 1, 0.94))
     for extension in ("png", "pdf"):
         fig.savefig(
@@ -713,9 +724,9 @@ def save_simclr_leiden_ari_twinx(checks, fold_out, *, temporal_threshold=0.90,
     left.grid(axis="y", alpha=0.25)
     if len(epochs) <= 35:
         left.set_xticks(epochs)
-        left.tick_params(axis="x", labelrotation=90)
+        left.tick_params(axis="x", labelsize=10, labelrotation=90)
     else:
-        left.tick_params(axis="x", labelrotation=0)
+        left.tick_params(axis="x", labelsize=10, labelrotation=0)
     fig.suptitle("Train-only Leiden temporal and seed reproducibility")
     left.legend(handles=[line_temporal, line_seed, line_t_threshold,
                          line_s_threshold], loc="lower center", ncol=2,
